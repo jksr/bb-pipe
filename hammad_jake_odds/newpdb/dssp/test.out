@@ -1,0 +1,1 @@
+perl model.pl inputs/1QD6/1QD6.res inputs/1QD6/1QD6.self ../newpairs/strong/1QD6.strong.contact ../newpairs/vdw/1QD6.vdw.contact ../newpairs/weak/1QD6.weak.contact 1QD6.out   269 12 36 0 82 11 83 1 125 0 132 1 167 1 167 1 204 1 203 2 234 2 232 0 267 -1

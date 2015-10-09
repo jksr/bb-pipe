@@ -1,0 +1,1 @@
+perl model.pl inputs/1T16/1T16.res inputs/1T16/1T16.self ../newpairs/strong/1T16.strong.contact ../newpairs/vdw/1T16.vdw.contact ../newpairs/weak/1T16.weak.contact 1T16.out   427 14 41 0 90 2 89 1 137 0 137 2 219 1 218 1 284 0 284 2 336 0 336 2 379 1 378 1 423 1

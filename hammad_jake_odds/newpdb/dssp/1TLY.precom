@@ -1,0 +1,1 @@
+perl model.pl inputs/1TLY/1TLY.res inputs/1TLY/1TLY.self ../newpairs/strong/1TLY.strong.contact ../newpairs/vdw/1TLY.vdw.contact ../newpairs/weak/1TLY.weak.contact 1TLY.out   275 12 10 2 46 0 45 2 88 1 99 1 134 2 135 1 176 3 178 0 226 1 224 1 275 2

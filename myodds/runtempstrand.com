@@ -1,0 +1,26 @@
+perl mkstrandcoord.pl 1ek9 
+perl mkstrandcoord.pl 2f1c 
+perl mkstrandcoord.pl 1p4t 
+perl mkstrandcoord.pl 1bxw 
+perl mkstrandcoord.pl 1k24 
+perl mkstrandcoord.pl 1qj8 
+perl mkstrandcoord.pl 1qd6 
+perl mkstrandcoord.pl 1t16 
+perl mkstrandcoord.pl 2f1t 
+perl mkstrandcoord.pl 1i78 
+perl mkstrandcoord.pl 1prn 
+perl mkstrandcoord.pl 1uyn 
+perl mkstrandcoord.pl 1e54 
+perl mkstrandcoord.pl 1thq 
+perl mkstrandcoord.pl 2o4v 
+perl mkstrandcoord.pl 2mpr 
+perl mkstrandcoord.pl 1kmo 
+perl mkstrandcoord.pl 1nqe 
+perl mkstrandcoord.pl 1a0s 
+perl mkstrandcoord.pl 1fep 
+perl mkstrandcoord.pl 7ahl 
+perl mkstrandcoord.pl 2omf 
+perl mkstrandcoord.pl 1xkw 
+perl mkstrandcoord.pl 2fcp 
+perl mkstrandcoord.pl 2por 
+cat temp/*.strand.coords > temp/updated_strand.coord

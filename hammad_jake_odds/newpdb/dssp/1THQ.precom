@@ -1,0 +1,1 @@
+perl model.pl inputs/1THQ/1THQ.res inputs/1THQ/1THQ.self ../newpairs/strong/1THQ.strong.contact ../newpairs/vdw/1THQ.vdw.contact ../newpairs/weak/1THQ.weak.contact 1THQ.out   163 8 20 0 61 1 63 2 94 1 100 2 136 2 133 0 164 2

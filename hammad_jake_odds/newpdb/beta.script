@@ -1,0 +1,10 @@
+wireframe off
+cartoons
+select 9001
+wireframe
+select TYR
+color red
+select PHE
+color blue
+select charged
+color green

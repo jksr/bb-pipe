@@ -1,0 +1,8 @@
+$pdb = shift @ARGV;
+
+open(IN, "<$pdb.coord");
+open(OUT, ">$pdb.res");
+
+while(<IN>) {
+    chomp;
+
