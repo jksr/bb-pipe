@@ -9,16 +9,21 @@ import numpy as np
 
 pdb = sys.argv[1]
 chain = sys.argv[2]
-subnum = int(sys.argv[3]) # subunit num of the strands that form the pore
-if len(sys.argv) < 5:
-	istoxin = False
-else:
-	istoxin = sys.argv[4] in ['true','True','1']
+subnum = int(sys.argv[3])
+barrelnum = int(sys.argv[4])
+istoxin = int(sys.argv[5])
+
+
+
+
+#subnum = int(sys.argv[3]) # subunit num of the strands that form the pore
+subnum /= barrelnum
 
 dssp = DSSPData('inputs/{0}/{0}.dssp'.format(pdb))
 ss = np.loadtxt('inputs/{0}/{0}.strands'.format(pdb)).astype(int)
 
 sublen = len(dssp.records)/subnum # the subunit length
+print len(open('inputs/{0}/{0}.res'.format(pdb)).readlines()), sublen
 substrandnum = len(ss) # the strand num of one subunit
 
 
@@ -53,7 +58,7 @@ for i in range(substrandnum):
 		left, right = -300, -300
 	subtricen.append( [left, mostcen, right] )
 
-if istoxin:
+if istoxin==1:
 	subtricen = np.flipud(subtricen)
 
 
@@ -71,27 +76,6 @@ tricenmtrx = np.mod(tricenmtrx,subnum) * sublen
 # then add the subtricen pattern to the basic tricenter matrix to get the final one
 tricenmtrx = tricenmtrx + np.tile(subtricen, (subnum,1))
 #np.savetxt('inputs/{0}/{0}.tri.center'.format(pdb), tricenmtrx, fmt='%d', delimiter='\t')
-
-
-## compute the cen.topo file
-cens =  tricenmtrx[:,1].astype(int).tolist()
-centopo = []
-sidechainf = open('inputs/{0}/{0}.sidechain'.format(pdb))
-lines = sidechainf.readlines()
-sidechainf.close()
-
-for line in lines:
-	splt = line.split()
-	if int(splt[0]) in cens:
-		if splt[3]=='IN':
-			centopo.append([splt[0],1])
-		else:
-			centopo.append([splt[0],2])
-if len(cens) != len(centopo):
-	assert( len(cens)/len(centopo) == subnum )
-
-centopo = np.array(centopo).astype(int)
-np.savetxt('inputs/{0}/{0}.cen.topo'.format(pdb), centopo, fmt='%d', delimiter='\t')
 
 
 ## compute the triplet.con file

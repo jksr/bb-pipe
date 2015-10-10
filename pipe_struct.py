@@ -31,12 +31,5 @@ if __name__ == '__main__':
 		os.system('python scripts/get_sidechain.py '+pdb+' '+pdb_info[pdb]['chain']+' '+pdb_info[pdb]['#subunit']+' '+pdb_info[pdb]['#barrel']+' '+pdb_info[pdb]['#tmstrand']+' '+pdb_info[pdb]['istoxin'])
 		### get cen topo
 		os.system('python scripts/get_centopo.py '+pdb)
-
-
-
-		# not checked
-
-		### get registrations
-		#os.system('python scripts/get_reg.py '+pdb+' '+pdb_info[pdb]['chain'])
-
-
+		### get tripletcon
+		os.system('python scripts/get_tripletcon.py '+pdb+' '+pdb_info[pdb]['chain']+' '+pdb_info[pdb]['#subunit']+' '+pdb_info[pdb]['#barrel']+' '+pdb_info[pdb]['#tmstrand']+' '+pdb_info[pdb]['istoxin'])

@@ -1,4 +1,0 @@
-Oct 8
-
-pipe_struct.py done
-everything perfectly dealt including multichain

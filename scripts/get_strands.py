@@ -78,7 +78,7 @@ def graph_reduce(betas):
 						break
 			except:
 				pass
-	print graph
+	#print graph
 
 	# catenate broken strands
 	#newgraph = []
