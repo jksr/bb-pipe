@@ -11,6 +11,7 @@ chain = sys.argv[2]
 
 dssp = DSSPData('inputs/{pdb}/{pdb}.dssp'.format(pdb=pdb))
 
+################# get aa from dssp ###################
 def aa(chain,res):
 	rtn = dssp.get(chain,res,'aa')
 	if rtn == 'X': 
@@ -18,8 +19,11 @@ def aa(chain,res):
 	elif rtn == 'a' or rtn == 'b': 
 		rtn = 'C'
 	return rtn
+######################################################
 
 
+
+################## check if two res are on the neighbouring strands ##################
 neighbor_dict = {}
 with open('inputs/{pdb}/{pdb}.strands'.format(pdb=pdb)) as fout:
 	strandnum = 0
@@ -40,8 +44,16 @@ def neighbor_strand(res1,res2):
 		return True
 	else:
 		return False
+######################################################################################
 
 
+
+################## return an ordered pair ##################
+def ordered_pair(val1, val2):
+	if val1 > val2:
+		val1, val2 = val2, val1
+	return val1, val2
+############################################################
 
 with open('inputs/{pdb}/{pdb}.sidechain'.format(pdb=pdb))as fin:
 	sidechains = []
@@ -49,11 +61,9 @@ with open('inputs/{pdb}/{pdb}.sidechain'.format(pdb=pdb))as fin:
 		split = line.split()
 		sidechains.append( [int(split[0]),split[1],split[2],float(split[3])] )
 
-
-sfout = open('inputs/{pdb}/{pdb}.strong'.format(pdb=pdb),'w')
-vfout = open('inputs/{pdb}/{pdb}.vdw'.format(pdb=pdb),'w')
-wfout = open('inputs/{pdb}/{pdb}.weak'.format(pdb=pdb),'w')
-
+strong_set = set()
+vdw_set = set()
+weak_set = set()
 
 
 for sidechain in sidechains:
@@ -118,14 +128,37 @@ for sidechain in sidechains:
 	weak2 = vdw-1
 
 	if neighbor_strand(res,strong):
-		sfout.write('{res}\t{strong}\n'.format(res=res,strong=strong,vdw=vdw,weak1=weak1,weak2=weak2))
+		strong_set.add(ordered_pair(res,strong))
 	if neighbor_strand(res,vdw):
-		vfout.write('{res}\t{vdw}\n'.format(res=res,strong=strong,vdw=vdw,weak1=weak1,weak2=weak2))
+		vdw_set.add(ordered_pair(res,vdw))
 	if neighbor_strand(res,weak1):
-		wfout.write('{res}\t{weak1}\n'.format(res=res,strong=strong,vdw=vdw,weak1=weak1,weak2=weak2))
+		weak_set.add(ordered_pair(res,weak1))
 	if neighbor_strand(res,weak2):
-		wfout.write('{res}\t{weak2}\n'.format(res=res,strong=strong,vdw=vdw,weak1=weak1,weak2=weak2))
+		weak_set.add(ordered_pair(res,weak2))
 
-sfout.close()
-vfout.close()
-wfout.close()
+
+
+
+
+with open('inputs/{pdb}/{pdb}.strong'.format(pdb=pdb),'w') as fout:
+	for pair in sorted(list(strong_set)):
+		fout.write(str(pair[0])+'\t'+str(pair[1])+'\n')
+
+with open('inputs/{pdb}/{pdb}.vdw'.format(pdb=pdb),'w') as fout:
+	for pair in sorted(list(vdw_set)):
+		fout.write(str(pair[0])+'\t'+str(pair[1])+'\n')
+
+with open('inputs/{pdb}/{pdb}.weak'.format(pdb=pdb),'w') as fout:
+	for pair in sorted(list(weak_set)):
+		fout.write(str(pair[0])+'\t'+str(pair[1])+'\n')
+
+#	sfout.write('{res}\t{strong}\n'.format(res=res,strong=strong,vdw=vdw,weak1=weak1,weak2=weak2))
+#vfout = open('inputs/{pdb}/{pdb}.vdw'.format(pdb=pdb),'w')
+#	vfout.write('{res}\t{vdw}\n'.format(res=res,strong=strong,vdw=vdw,weak1=weak1,weak2=weak2))
+#vfout.close()
+
+#wfout = open('inputs/{pdb}/{pdb}.weak'.format(pdb=pdb),'w')
+#	wfout.write('{res}\t{weak1}\n'.format(res=res,strong=strong,vdw=vdw,weak1=weak1,weak2=weak2))
+#wfout.close()
+
+
