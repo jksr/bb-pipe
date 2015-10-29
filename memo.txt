@@ -1,0 +1,14 @@
+Oct 28, 2015 Wei Tian
+
+all the structure pipe checked, everything should be fine.
+
+For the odds, my method still gives different results than meishan's, and her results work better
+for registration prediction. there could be something wrong with get_pair script, or with
+pair-odds calculation script.
+This needs to be checked later.
+
+
+
+Oct 29, 2015 Wei Tian
+
+everything checked, everthing works including myodds

@@ -73,9 +73,8 @@ strand_num = 0
 strand_ids = []
 for line in lines:
 	start, end = line.split()
-	# use extended strand than the detected strands
-	strand_residues += range(int(start)-1,int(end)+2)
-	#strand_residues += range(int(start),int(end)+1)
+	#strand_residues += range(int(start)-1,int(end)+2) # use extended strand than the detected strands
+	strand_residues += range(int(start),int(end)+1)
 	strand_ids += [strand_num for item in range(int(start)-1,int(end)+2)]
 	strand_num += 1
 
@@ -116,6 +115,6 @@ for pdb_res in pdb_chain:
 	else:
 		facing = 'IN'
 	f.write(str(seqid)+' '+facing+' '+AminoAcid.three_to_one(pdb_res.get_resname())+' '+str(coordca[2])+'\n')
-	#f.write(str(seqid)+' '+facing+' '+AminoAcid.three_to_one(pdb_res.get_resname())+' '+str(coordca[2])+' '+str(strand_ids[strand_residues.index(seqid)])+'\n')
+	#f.write(str(seqid)+'\tTM\t'+AminoAcid.three_to_one(pdb_res.get_resname())+'\t'+facing+'\t'+'%.2f'%coordca[2]+'\n')
 
 f.close()

@@ -20,9 +20,9 @@ resids = dssp.get_chain_res(chain)
 
 ## get mem thickness of the pdb
 f = open(pdbfn)
+#thickness = 13.5
 thickness = float(f.readline().split()[-1])
 f.close()
-thickness = 13.5
 
 ## get all beta structures
 betas = []
@@ -126,7 +126,7 @@ f.close()
 
 
 # cut the extended strands, just keep the TM part
-tol = 2
+tol = 0
 tmpbetas = []
 for beta in betas:
 	tmpbetas.append([])

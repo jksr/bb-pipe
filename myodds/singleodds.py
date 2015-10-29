@@ -93,7 +93,7 @@ for j in range(8):
 			if regionlist[j][i] == 0 and nx[i] == 0.0:
 				fout[j].write( '1.000\n' )
 			elif regionlist[j][i] == 0:
-				fout[j].write( 'o.000\n' )
+				fout[j].write( '0.000\n' )
 			else:
 				print "ERORROROOROORO!!!!!!!!!!!!!!!!!!11"
 

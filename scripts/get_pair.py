@@ -17,7 +17,8 @@ def aa(res):
 	rtn = dssp.get(chain,res,'aa')
 	if rtn == 'X': 
 		rtn = 'M'
-	elif rtn == 'a' or rtn == 'b': 
+	#elif rtn == 'a' or rtn == 'b': 
+	elif rtn.islower(): 
 		rtn = 'C'
 	return rtn
 ######################################################

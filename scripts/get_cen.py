@@ -39,7 +39,8 @@ chain = sys.argv[2]
 
 dssp = dsspdata.DSSPData('inputs/'+pdb+'/'+pdb+'.dssp')
 
-f = open('inputs/'+pdb+'/'+pdb+'.tmstrands')
+f = open('inputs/'+pdb+'/'+pdb+'.strands')
+#f = open('inputs/'+pdb+'/'+pdb+'.tmstrands')
 lines = f.readlines()
 f.close()
 
