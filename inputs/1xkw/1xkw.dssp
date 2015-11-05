@@ -1,8 +1,8 @@
-==== Secondary Structure Definition by the program DSSP, CMBI version by M.L. Hekkelman/2010-10-21 ==== DATE=2015-10-29        .
+==== Secondary Structure Definition by the program DSSP, CMBI version by M.L. Hekkelman/2010-10-21 ==== DATE=2015-11-05        .
 REFERENCE W. KABSCH AND C.SANDER, BIOPOLYMERS 22 (1983) 2577-2637                                                              .
 HEADER    MEMBRANE PROTEIN                        30-SEP-04   1XKW                                                             .
-COMPND   2 MOLECULE: FE(III)-PYOCHELIN RECEPTOR;                                                                               .
-SOURCE   2 ORGANISM_SCIENTIFIC: PSEUDOMONAS AERUGINOSA;                                                                        .
+COMPND    MOL_ID: 1; MOLECULE: FE(III)-PYOCHELIN RECEPTOR;                                                                     .
+SOURCE    MOL_ID: 1; ORGANISM_SCIENTIFIC: PSEUDOMONAS AERUGINOSA; ORGANISM_COMMO                                               .
 AUTHOR    D.COBESSI,H.CELIA,F.PATTUS                                                                                           .
   655  2  0  0  0 TOTAL NUMBER OF RESIDUES, NUMBER OF CHAINS, NUMBER OF SS-BRIDGES(TOTAL,INTRACHAIN,INTERCHAIN)                .
  27689.8   ACCESSIBLE SURFACE OF PROTEIN (ANGSTROM**2)                                                                         .

@@ -1,8 +1,8 @@
-==== Secondary Structure Definition by the program DSSP, CMBI version by M.L. Hekkelman/2010-10-21 ==== DATE=2015-10-29        .
+==== Secondary Structure Definition by the program DSSP, CMBI version by M.L. Hekkelman/2010-10-21 ==== DATE=2015-11-05        .
 REFERENCE W. KABSCH AND C.SANDER, BIOPOLYMERS 22 (1983) 2577-2637                                                              .
 HEADER    TRANSPORT PROTEIN                       30-JUL-13   4C00                                                             .
-COMPND   2 MOLECULE: TRANSLOCATION AND ASSEMBLY MODULE TAMA;                                                                   .
-SOURCE   2 ORGANISM_SCIENTIFIC: ESCHERICHIA COLI;                                                                              .
+COMPND    MOL_ID: 1; MOLECULE: TRANSLOCATION AND ASSEMBLY MODULE TAMA; FRAGMENT:                                               .
+SOURCE    MOL_ID: 1; ORGANISM_SCIENTIFIC: ESCHERICHIA COLI; ORGANISM_TAXID: 562;                                               .
 AUTHOR    F.GRUSS,F.ZAEHRINGER,R.P.JAKOB,B.M.BURMANN,S.HILLER,T.MAIER                                                          .
   544  2  0  0  0 TOTAL NUMBER OF RESIDUES, NUMBER OF CHAINS, NUMBER OF SS-BRIDGES(TOTAL,INTRACHAIN,INTERCHAIN)                .
  28771.5   ACCESSIBLE SURFACE OF PROTEIN (ANGSTROM**2)                                                                         .

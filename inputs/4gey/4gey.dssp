@@ -1,8 +1,8 @@
-==== Secondary Structure Definition by the program DSSP, CMBI version by M.L. Hekkelman/2010-10-21 ==== DATE=2015-10-29        .
+==== Secondary Structure Definition by the program DSSP, CMBI version by M.L. Hekkelman/2010-10-21 ==== DATE=2015-11-05        .
 REFERENCE W. KABSCH AND C.SANDER, BIOPOLYMERS 22 (1983) 2577-2637                                                              .
 HEADER    TRANSPORT PROTEIN                       02-AUG-12   4GEY                                                             .
-COMPND   2 MOLECULE: PORIN B;                                                                                                  .
-SOURCE   2 ORGANISM_SCIENTIFIC: PSEUDOMONAS PUTIDA;                                                                            .
+COMPND    MOL_ID: 1; MOLECULE: PORIN B; FRAGMENT: UNP RESIDUES 27-447; ENGINEERE                                               .
+SOURCE    MOL_ID: 1; ORGANISM_SCIENTIFIC: PSEUDOMONAS PUTIDA; ORGANISM_TAXID: 93                                               .
 AUTHOR    BERT VAN DEN BERG                                                                                                    .
   420  1  1  1  0 TOTAL NUMBER OF RESIDUES, NUMBER OF CHAINS, NUMBER OF SS-BRIDGES(TOTAL,INTRACHAIN,INTERCHAIN)                .
  18672.0   ACCESSIBLE SURFACE OF PROTEIN (ANGSTROM**2)                                                                         .
@@ -21,7 +21,7 @@ AUTHOR    BERT VAN DEN BERG                                                     
    30  7.1   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I+4), SAME NUMBER PER 100 RESIDUES                              .
     6  1.4   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(I+5), SAME NUMBER PER 100 RESIDUES                              .
   1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30     *** HISTOGRAMS OF ***           .
-  0  0  0  4  0  0  0  1  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0    RESIDUES PER ALPHA HELIX         .
+  1  0  0  3  0  0  0  1  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0    RESIDUES PER ALPHA HELIX         .
   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0    PARALLEL BRIDGES PER LADDER      .
   2  2  2  0  1  1  1  3  2  5  2  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0    ANTIPARALLEL BRIDGES PER LADDER  .
   2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0    LADDERS PER SHEET                .
@@ -113,11 +113,11 @@ AUTHOR    BERT VAN DEN BERG                                                     
    85   86 A R        -     0   0  143    -33,-2.0     2,-0.5    -2,-0.2    -2,-0.1  -0.808  33.2-125.6-124.4 160.6   -4.5   15.1   16.5
    86   87 A N    >>  -     0   0    4     -2,-0.3     4,-2.1     1,-0.1     3,-0.8  -0.927   1.5-153.4-117.0 122.6   -6.3   11.7   16.2
    87   88 A L  H 3>>S+     0   0    0     -2,-0.5     4,-3.0     1,-0.2     5,-1.6   0.844  95.0  67.3 -53.0 -41.8  -10.0   11.1   16.9
-   88   89 A S  H 34>S+     0   0    3      1,-0.2     5,-2.3     3,-0.2    11,-0.4   0.859 110.9  33.6 -51.2 -41.1   -9.2    7.5   17.9
-   89   90 A N  H <45S+     0   0   84     -3,-0.8    -1,-0.2     3,-0.2    -2,-0.2   0.928 121.0  47.3 -77.4 -45.6   -7.4    8.7   21.0
-   90   91 A D  H  <5S-     0   0   60     -4,-2.1    -2,-0.2     1,-0.1    -3,-0.2   0.708 134.4  -3.8 -80.1 -22.7   -9.5   11.8   21.7
-   91   92 A R  T  <5S+     0   0   41     -4,-3.0   -46,-2.6    -5,-0.2    -3,-0.2   0.618 124.4  51.0-133.0 -44.2  -13.0   10.3   21.5
-   92   93 A I  T   <S+     0   0    1     -5,-1.6   -48,-2.6   -48,-0.2    -4,-0.2   0.927  90.5  78.0 -72.7 -46.7  -13.3    6.6   20.4
+   88   89 A S  I 34>S+     0   0    3      1,-0.2     5,-2.3     3,-0.2    11,-0.4   0.859 110.9  33.6 -51.2 -41.1   -9.2    7.5   17.9
+   89   90 A N  I <45S+     0   0   84     -3,-0.8    -1,-0.2     3,-0.2    -2,-0.2   0.928 121.0  47.3 -77.4 -45.6   -7.4    8.7   21.0
+   90   91 A D  I  <5S-     0   0   60     -4,-2.1    -2,-0.2     1,-0.1    -3,-0.2   0.708 134.4  -3.8 -80.1 -22.7   -9.5   11.8   21.7
+   91   92 A R  I  <5S+     0   0   41     -4,-3.0   -46,-2.6    -5,-0.2    -3,-0.2   0.618 124.4  51.0-133.0 -44.2  -13.0   10.3   21.5
+   92   93 A I  I   <S+     0   0    1     -5,-1.6   -48,-2.6   -48,-0.2    -4,-0.2   0.927  90.5  78.0 -72.7 -46.7  -13.3    6.6   20.4
    93   94 A S  S   <S-     0   0    8     -5,-2.3     5,-0.2    -6,-0.3   308,-0.1  -0.242  79.3-117.8 -72.3 145.8  -10.9    4.7   22.7
    94   95 A D  B >   -S   97   0B   0      3,-0.9     3,-1.9     1,-0.1    -1,-0.1  -0.687  35.9-128.1 -63.1 128.5  -11.2    3.6   26.2
    95   96 A P  T 3  S+     0   0  104      0, 0.0     3,-0.2     0, 0.0    -1,-0.1   0.706 107.8  43.6 -61.7 -17.1   -8.3    5.6   27.7

@@ -1,8 +1,8 @@
-==== Secondary Structure Definition by the program DSSP, CMBI version by M.L. Hekkelman/2010-10-21 ==== DATE=2015-10-29        .
+==== Secondary Structure Definition by the program DSSP, CMBI version by M.L. Hekkelman/2010-10-21 ==== DATE=2015-11-05        .
 REFERENCE W. KABSCH AND C.SANDER, BIOPOLYMERS 22 (1983) 2577-2637                                                              .
 HEADER    MEMBRANE PROTEIN                        19-JUL-11   3SZV                                                             .
-COMPND   2 MOLECULE: PYROGLUTATMATE PORIN OPDO;                                                                                .
-SOURCE   2 ORGANISM_SCIENTIFIC: PSEUDOMONAS AERUGINOSA;                                                                        .
+COMPND    MOL_ID: 1; MOLECULE: PYROGLUTATMATE PORIN OPDO; FRAGMENT: UNP RESIDUES                                               .
+SOURCE    MOL_ID: 1; ORGANISM_SCIENTIFIC: PSEUDOMONAS AERUGINOSA; ORGANISM_TAXID                                               .
 AUTHOR    B.BERT VAN DEN,E.ELIF                                                                                                .
   364  4  0  0  0 TOTAL NUMBER OF RESIDUES, NUMBER OF CHAINS, NUMBER OF SS-BRIDGES(TOTAL,INTRACHAIN,INTERCHAIN)                .
  18048.9   ACCESSIBLE SURFACE OF PROTEIN (ANGSTROM**2)                                                                         .

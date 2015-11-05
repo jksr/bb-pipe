@@ -1,8 +1,8 @@
-==== Secondary Structure Definition by the program DSSP, CMBI version by M.L. Hekkelman/2010-10-21 ==== DATE=2015-10-29        .
+==== Secondary Structure Definition by the program DSSP, CMBI version by M.L. Hekkelman/2010-10-21 ==== DATE=2015-11-05        .
 REFERENCE W. KABSCH AND C.SANDER, BIOPOLYMERS 22 (1983) 2577-2637                                                              .
 HEADER    OUTER MEMBRANE PROTEIN                  26-JUN-00                                                                    .
-COMPND   2 MOLECULE: OUTER MEMBRANE PORIN PROTEIN 32;                                                                          .
-SOURCE   2 ORGANISM_SCIENTIFIC: COMAMONAS ACIDOVORANS;                                                                         .
+COMPND    MOL_ID: 1; MOLECULE: OUTER MEMBRANE PORIN PROTEIN 32; SYNONYM: OMP32;                                                .
+SOURCE    MOL_ID: 1; ORGANISM_SCIENTIFIC: COMAMONAS ACIDOVORANS; ATCC: 15668; CE                                               .
 AUTHOR    K.ZETH,K.DIEDERICHS,W.WELTE,H.ENGELHARDT                                                                             .
  1020  6  0  0  0 TOTAL NUMBER OF RESIDUES, NUMBER OF CHAINS, NUMBER OF SS-BRIDGES(TOTAL,INTRACHAIN,INTERCHAIN)                .
  37391.1   ACCESSIBLE SURFACE OF PROTEIN (ANGSTROM**2)                                                                         .

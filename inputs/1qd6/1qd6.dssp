@@ -1,9 +1,9 @@
-==== Secondary Structure Definition by the program DSSP, CMBI version by M.L. Hekkelman/2010-10-21 ==== DATE=2015-10-29        .
+==== Secondary Structure Definition by the program DSSP, CMBI version by M.L. Hekkelman/2010-10-21 ==== DATE=2015-11-05        .
 REFERENCE W. KABSCH AND C.SANDER, BIOPOLYMERS 22 (1983) 2577-2637                                                              .
 HEADER    MEMBRANE PROTEIN                        09-JUL-99                                                                    .
-COMPND   2 MOLECULE: OUTER MEMBRANE PHOSPHOLIPASE (OMPLA);                                                                     .
-SOURCE   2 SYNTHETIC: YES;                                                                                                     .
-AUTHOR    H.J.SNIJDER,I.UBARRETXENA-BELANDIA,M.BLAAUW,K.H.KALK,                                                                .
+COMPND    MOL_ID: 1; MOLECULE: OUTER MEMBRANE PHOSPHOLIPASE (OMPLA); FRAGMENT: R                                               .
+SOURCE    MOL_ID: 1; SYNTHETIC: YES; MOL_ID: 2; ORGANISM_SCIENTIFIC: ESCHERICHIA                                               .
+AUTHOR    H.J.SNIJDER,I.UBARRETXENA-BELANDIA,M.BLAAUW,K.H.KALK, H.M.VERHEIJ,M.R.                                               .
   505  4  0  0  0 TOTAL NUMBER OF RESIDUES, NUMBER OF CHAINS, NUMBER OF SS-BRIDGES(TOTAL,INTRACHAIN,INTERCHAIN)                .
  21005.8   ACCESSIBLE SURFACE OF PROTEIN (ANGSTROM**2)                                                                         .
   373 73.9   TOTAL NUMBER OF HYDROGEN BONDS OF TYPE O(I)-->H-N(J)  , SAME NUMBER PER 100 RESIDUES                              .
