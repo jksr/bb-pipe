@@ -27,10 +27,10 @@ for cen in cens:
 	#####
 	candidates = []
 	for offset in range(-4,6,2):
-		if cen+offset in topos:
-			candidates.append(topos[cen+offset])
+		if str(int(cen)+offset) in topos:
+			candidates.append(topos[str(int(cen)+offset)])
 	###if topos[cen]=='IN':
-	if collections.Counter(condidates).most_common(1)[0]=='IN':
+	if collections.Counter(candidates).most_common(1)[0]=='IN':
 		f.write(cen+'\t1\n')
 	else:
 		f.write(cen+'\t2\n')

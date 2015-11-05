@@ -5,12 +5,17 @@ import dsspdata
 import collections
 
 
-if len(sys.argv)!=3:
-	print 'Usage: '+sys.argv[0]+' <pdb> <chain>'
+if len(sys.argv)<3:
+	print 'Usage: '+sys.argv[0]+' <pdb> <chain> [-v : verbose]'
 	sys.exit(0)
 
 pdb = sys.argv[1]
 chain = sys.argv[2]
+if len(sys.argv)==4:
+	verbose = True
+else:
+	verbose = False
+
 
 dssp = dsspdata.DSSPData('inputs/'+pdb+'/'+pdb+'.dssp')
 
@@ -54,7 +59,7 @@ def determine_reg(barrel):
 					pass
 			if not pos2 is None:
 				ireg.append(pos2-pos1)
-		if len(set(ireg))>1:
+		if len(set(ireg))>1 and verbose:
 			print 'Warning: potential beta bulge detected in '+pdb+' between strand '+str(i)+' and strand '+str((i+1)%strandn)
 			print ireg
 		regs.append( collections.Counter(ireg).most_common(1)[0][0] )
