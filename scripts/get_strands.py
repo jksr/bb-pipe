@@ -127,7 +127,7 @@ f.close()
 
 
 # cut the extended strands, just keep the TM part
-tol = 0
+tol = 2
 tmpbetas = []
 for beta in betas:
 	tmpbetas.append([])
