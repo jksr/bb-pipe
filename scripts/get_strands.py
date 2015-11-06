@@ -20,9 +20,10 @@ resids = dssp.get_chain_res(chain)
 
 ## get mem thickness of the pdb
 f = open(pdbfn)
-#thickness = 13.5
 thickness = float(f.readline().split()[-1])
 f.close()
+## use this thickness instead of opm prediction coz it gives better registration prediction
+thickness = 13.5
 
 ## get all beta structures
 betas = []
