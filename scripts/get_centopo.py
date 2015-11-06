@@ -1,5 +1,6 @@
 import sys
 sys.dont_write_bytecode = True
+import collections
 
 if len(sys.argv)!=2:
 	print 'Usage: '+sys.argv[0]+' pdb'
@@ -23,7 +24,13 @@ for line in lines:
 
 f = open('inputs/'+pdb+'/'+pdb+'.cen.topo','w')
 for cen in cens:
-	if topos[cen]=='IN':
+	#####
+	candidates = []
+	for offset in range(-4,6,2):
+		if cen+offset in topos:
+			candidates.append(topos[cen+offset])
+	###if topos[cen]=='IN':
+	if collections.Counter(condidates).most_common(1)[0]=='IN':
 		f.write(cen+'\t1\n')
 	else:
 		f.write(cen+'\t2\n')
