@@ -29,6 +29,8 @@ def findpair(center, is2end):
 		if leftref in dssp.records and rightref in dssp.records:
 			right = dssp.records[rightref]['resnum'] + offset
 			left = dssp.records[leftref]['resnum'] + offset
+			if right > left:
+				right, left = left, right
 			if is2end:
 				return left,right
 			else:
@@ -51,6 +53,7 @@ for i in range(tmstrandnum):
 if istoxin==1:
 	subtricen = np.flipud(subtricen)
 
+print subtricen
 tricenmtrx = np.tile(subtricen, (rep,1))
 
 # compute the triplet.con file
@@ -62,6 +65,5 @@ for i in range(len(tripletcon)):
 	else:
 		tripletcon[i][[0,1,2]] = tripletcon[i][[0,1,2]] - np.array([8,9,8])
 		tripletcon[i][[3,4,5]] = np.array([2,1,2])
-
 np.savetxt('inputs/{0}/{0}.triplet.con'.format(pdb), tripletcon, fmt='%d', delimiter='\t')
 
