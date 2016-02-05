@@ -23,15 +23,16 @@ if __name__ == '__main__':
 		#os.system('mkdssp inputs/'+pdb+'/'+pdb+'.pdb > inputs/'+pdb+'/'+pdb+'.dssp')
 		### get res
 		#os.system('python scripts/get_res.py '+pdb+' '+pdb_info[pdb]['chain'])
-		## get strand intervals
+		### get strand intervals
 		#os.system('python scripts/get_strands.py '+pdb+' '+pdb_info[pdb]['chain'])
-		### get the center of each strand
-		#os.system('python scripts/get_cen.py '+pdb+' '+pdb_info[pdb]['chain'])
-		### get sidechain info of each residue
-		#os.system('python scripts/get_sidechain.py '+pdb+' '+pdb_info[pdb]['chain']+' '+pdb_info[pdb]['#subunit']+' '+pdb_info[pdb]['#barrel']+' '+pdb_info[pdb]['#tmstrand']+' '+pdb_info[pdb]['istoxin'])
-		### get cen topo
-		#os.system('python scripts/get_centopo.py '+pdb)
-		### get tripletcon
-		#os.system('python scripts/get_tripletcon.py '+pdb+' '+pdb_info[pdb]['chain']+' '+pdb_info[pdb]['#subunit']+' '+pdb_info[pdb]['#barrel']+' '+pdb_info[pdb]['#tmstrand']+' '+pdb_info[pdb]['istoxin'])
-		### get registration
-		#os.system('python scripts/get_reg.py '+pdb+' '+pdb_info[pdb]['chain'])
+
+		## get the center of each strand
+		os.system('python scripts/get_cen.py '+pdb+' '+pdb_info[pdb]['chain'])
+		## get sidechain info of each residue
+		os.system('python scripts/get_sidechain.py '+pdb+' '+pdb_info[pdb]['chain']+' '+pdb_info[pdb]['#subunit']+' '+pdb_info[pdb]['#barrel']+' '+pdb_info[pdb]['#tmstrand']+' '+pdb_info[pdb]['istoxin'])
+		## get cen topo
+		os.system('python scripts/get_centopo.py '+pdb)
+		## get tripletcon
+		os.system('python scripts/get_tripletcon.py '+pdb+' '+pdb_info[pdb]['chain']+' '+pdb_info[pdb]['#subunit']+' '+pdb_info[pdb]['#barrel']+' '+pdb_info[pdb]['#tmstrand']+' '+pdb_info[pdb]['istoxin'])
+		## get registration
+		os.system('python scripts/get_reg.py '+pdb+' '+pdb_info[pdb]['chain'])
