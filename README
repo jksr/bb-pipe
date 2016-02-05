@@ -9,6 +9,20 @@ This needs to be checked later.
 
 
 
+
 Oct 29, 2015 Wei Tian
 
 everything checked, everthing works including myodds
+
+
+
+
+Feb 4, 2016 Wei Tian
+
+For several proteins (eg. 4k3b & 4c4v) the script may fail because of the incorrect strand detection
+This can be easily fixed by:
+	run pipe till strand detection step
+	manually open the wrong .strands & .tmstrands files and correct them
+	run subscripts after strand detection step
+
+
