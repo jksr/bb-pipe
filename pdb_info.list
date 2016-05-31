@@ -57,7 +57,7 @@
 7ahl	A		7			1		2			1		S.aureus			?				Toxin	SYMMETRIC.ENERGY
 3b07	A		8			1		2			1		S.aureus			E.coli			Toxin	SYMMETRIC.ENERGY
 3o44	A		7			1		2			1		V.cholerae			E.coli			Toxin	SYMMETRIC.ENERGY
-#3emn	X		1			1		19			0		M.musculus			E.coli			VDAC	VDAC
+3emn	X		1			1		19			0		M.musculus			E.coli			VDAC	VDAC
 4c4v	B		1			1		16			0		E.coli				?				Bam		BamA.redundant
 4n75	A		1			1		16			0		E.coli				?				Bam		BamA.redundant
 4k3b	A		1			1		16			0		N.gonorrhoeae		?				Bam		BamA.redundant
